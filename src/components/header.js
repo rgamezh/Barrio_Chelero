@@ -1,32 +1,57 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Img from "gatsby-image"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, logo, cart, menu }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `#dab878`,
     }}
   >
     <div
       style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `.45rem 3rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <Link
+        to="/"
+        style={{
+          width: "109px",
+          color: `white`,
+          textDecoration: `none`,
+        }}
+      >
+        <Img style={{maxWidth: "100%"}} fluid={logo} />
+      </Link>
+      <div style={{display: "flex", alignItems: "center", marginRight: "10rem"}}>
         <Link
           to="/"
           style={{
+            width: "59px",
+            color: `white`,
+            textDecoration: `none`,
+            marginRight: "50px",
+          }}
+        >
+          <Img style={{maxWidth: "100%"}} fluid={cart} />
+        </Link>
+      
+        <Link
+          to="/"
+          style={{
+            width: "50px",
             color: `white`,
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <Img style={{maxWidth: "100%"}} fluid={menu} />
         </Link>
-      </h1>
+      </div>
     </div>
   </header>
 )

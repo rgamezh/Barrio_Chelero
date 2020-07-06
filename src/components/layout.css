@@ -620,3 +620,34 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+@font-face {
+  font-family: 'abeganshi';
+  font-style: normal;
+  src: url("../font/Abeganshi.ttf")
+}
+
+@font-face {
+  font-family: 'chunk-five';
+  font-style: normal;
+  src: url("../font/Chunkfive-Ex.ttf")
+}
+
+@font-face {
+  font-family: 'pt-sans-bold';
+  font-style: bold;
+  src: url("../font/PTSans-Bold.ttf")
+}
+
+.main-title {
+  font-family: "abeganshi";
+  font-size: 4rem;
+}
+
+.advantages {
+  font-family: "chunk-five";
+}
+
+.pt-sans-bold{
+  font-family: "pt-sans-bold";
+}
