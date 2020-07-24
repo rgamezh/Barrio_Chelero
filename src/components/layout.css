@@ -651,3 +651,13 @@ pre tt:after {
 .pt-sans-bold{
   font-family: "pt-sans-bold";
 }
+
+.map {
+  width: 50%;
+  fill:#c19037;
+  cursor: pointer;
+}
+
+.map .st0:hover {
+  fill: #9b6421;
+}
